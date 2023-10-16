@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+<div class="main">
+    <div class="score-board">
+        <div class="head">
+            <h1>ROCK</h1>
+            <h1>PAPER</h1>
+            <h1>SCISSORS</h1>
+        </div>
+      <div class="score">
+        <div class="comp-score">
+          <h3 class="box">Computer<br>Score</h3>
+          
+          <h1>0</h1>
+        </div>
+        <div class="person-score">
+          <h3 class="box">Your<br>Score</h3>
+          <h1>0</h1>
+        </div>
+      </div>
+    </div>
+    <div class="sign">
+      <div class="triangle-container">
+        <svg height="500" width="500">
+          <polygon points="280,400 100,100 480,100" class="triangle" />
+        </svg>
+      </div>
+      <div class="uppersign">
+        <div class="option rock" onclick="play('rock')">
+          <img src="./rock.png" alt="Rock">
+        </div>
+        <div class="option scissors" onclick="play('scissors')">
+          <img src="./scissors.png" alt="Scissors">
+        </div>
+
+    </div>
+        <div class="option paper" onclick="play('paper')">
+          <img src="./paper.png" alt="Paper">
+        </div>
+    </div>
+    <div class="result">
+      <div class="you-picked">
+        <h3>You Picked</h3>
+        <div class="option person-choice">
+          <img src="" alt="">
+        </div>
+      </div>
+      <div class="result-button">
+        <h1></h1>
+        <h3></h3>
+        <button onclick="showSign()">Play Again</button>
+      </div>
+      <div class="pc-picked">
+        <h3>PC Picked</h3>
+        <div class="option computer-choice">
+          <img src="" alt="">
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <div class="additional-content" style="display: none;">
+    <div class="cup-container">
+      <img src="trophy.png" alt="yourray" class="cup">
+      <img src="Star 1.svg" alt="star" class="star star1">
+      <img src="Star 2.svg" alt="star" class="star star2">
+      <img src="Star 3.svg" alt="star" class="star star3">
+      <img src="Star 3.svg" alt="star" class="star star4">
+      <img src="Star 4.svg" alt="star" class="star star5">
+      <img src="Star 6.svg" alt="star" class="star star6">
+      <img src="Star 7.svg" alt="star" class="star star7">
+      <img src="Star 9.svg" class="star star8">
+    </div> 
+    <p>HURRAY!!</p>
+    <h1>YOU WON THE GAME</h1>
+    <button onclick="showSign()" class="btn-h">Play Again</button>
+  </div>
+  
+  <div class="both-button">
+    <button class="rule-button btn-h" id="showRules" onclick="showRules()">RULES</button>
+    <button id="nextButton" class="btn-h" onclick="showAdditionalContent()">NEXT</button>
+  </div>
+  <div class="rules-popup" id="rulesPopup">
+    <span class="close" id="closeRules" onclick="closeRules()">&times;</span>
+    <div class="rules-content">
+      <h2>Gaming Rules</h2>
+      <ul>
+        <li><span>Rock beats scissors, scissors beat paper, and paper beats rock.</span></li>
+        <li><span>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”</span> </li>
+        <li><span>Use rock, paper, scissors to settle minor decisions or simply play to pass the time.</span></li>
+        <li><span>If both players lay down the same hand, each player lays down another hand.</span></li>
+      </ul>
+    </div>
+  </div>
+  <script src="script.js"></script>
+
+</body>
+</html>
